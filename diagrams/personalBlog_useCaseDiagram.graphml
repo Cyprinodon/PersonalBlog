@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:java="http://www.yworks.com/xml/yfiles-common/1.0/java" xmlns:sys="http://www.yworks.com/xml/yfiles-common/markup/primitives/2.0" xmlns:x="http://www.yworks.com/xml/yfiles-common/markup/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:y="http://www.yworks.com/xml/graphml" xmlns:yed="http://www.yworks.com/xml/yed/3" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://www.yworks.com/xml/schema/graphml/1.1/ygraphml.xsd">
+  <!--Created by yEd 3.18.0.2-->
+  <key attr.name="Description" attr.type="string" for="graph" id="d0"/>
+  <key for="port" id="d1" yfiles.type="portgraphics"/>
+  <key for="port" id="d2" yfiles.type="portgeometry"/>
+  <key for="port" id="d3" yfiles.type="portuserdata"/>
+  <key attr.name="url" attr.type="string" for="node" id="d4"/>
+  <key attr.name="description" attr.type="string" for="node" id="d5"/>
+  <key for="node" id="d6" yfiles.type="nodegraphics"/>
+  <key for="graphml" id="d7" yfiles.type="resources"/>
+  <key attr.name="url" attr.type="string" for="edge" id="d8"/>
+  <key attr.name="description" attr.type="string" for="edge" id="d9"/>
+  <key for="edge" id="d10" yfiles.type="edgegraphics"/>
+  <graph edgedefault="directed" id="G">
+    <data key="d0"/>
+    <node id="n0" yfiles.foldertype="group">
+      <data key="d4"/>
+      <data key="d6">
+        <y:ProxyAutoBoundsNode>
+          <y:Realizers active="0">
+            <y:GroupNode>
+              <y:Geometry height="769.5194989013654" width="528.2" x="506.79999999999995" y="87.47380432129262"/>
+              <y:Fill color="#FFFFFF" transparent="false"/>
+              <y:BorderStyle color="#FF0000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="right" autoSizePolicy="node_width" backgroundColor="#FFFF99" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="bold" height="22.37646484375" horizontalTextPosition="center" iconTextGap="4" lineColor="#FF0000" modelName="internal" modelPosition="t" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="528.2" x="0.0" y="0.0">System</y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:State closed="false" closedHeight="50.0" closedWidth="50.0" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="15" bottomF="15.0" left="15" leftF="15.0" right="15" rightF="15.0" top="15" topF="15.0"/>
+              <y:BorderInsets bottom="16" bottomF="16.34303405761534" left="30" leftF="30.0" right="51" rightF="51.000000000000114" top="0" topF="0.0"/>
+            </y:GroupNode>
+            <y:GroupNode>
+              <y:Geometry height="66.79999999999995" width="96.39999999999998" x="554.8" y="277.6"/>
+              <y:Fill color="#FFFF99" transparent="false"/>
+              <y:BorderStyle color="#FF0000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="node_width" borderDistance="0.0" fontFamily="Dialog" fontSize="15" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="22.37646484375" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="96.39999999999998" x="0.0" y="22.211767578124977">System</y:NodeLabel>
+              <y:Shape type="rectangle"/>
+              <y:State closed="true" closedHeight="66.79999999999995" closedWidth="96.39999999999998" innerGraphDisplayEnabled="false"/>
+              <y:Insets bottom="5" bottomF="5.0" left="5" leftF="5.0" right="5" rightF="5.0" top="5" topF="5.0"/>
+              <y:BorderInsets bottom="0" bottomF="0.0" left="0" leftF="0.0" right="0" rightF="0.0" top="0" topF="0.0"/>
+            </y:GroupNode>
+          </y:Realizers>
+        </y:ProxyAutoBoundsNode>
+      </data>
+      <graph edgedefault="directed" id="n0:">
+        <node id="n0::n0">
+          <data key="d4"/>
+          <data key="d6">
+            <y:ShapeNode>
+              <y:Geometry height="50.0" width="122.0" x="584.0000000000001" y="334.99999999999994"/>
+              <y:Fill color="#FFFF99" transparent="false"/>
+              <y:BorderStyle color="#FF0000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.3515625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="122.0" x="0.0" y="13.82421875">Add blog post</y:NodeLabel>
+              <y:Shape type="ellipse"/>
+            </y:ShapeNode>
+          </data>
+        </node>
+        <node id="n0::n1">
+          <data key="d4"/>
+          <data key="d6">
+            <y:ShapeNode>
+              <y:Geometry height="50.0" width="122.0" x="602.0000000000001" y="124.85026916504262"/>
+              <y:Fill color="#FFFF99" transparent="false"/>
+              <y:BorderStyle color="#FF0000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.3515625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="122.0" x="0.0" y="13.82421875">Modify blog post</y:NodeLabel>
+              <y:Shape type="ellipse"/>
+            </y:ShapeNode>
+          </data>
+        </node>
+        <node id="n0::n2">
+          <data key="d4"/>
+          <data key="d6">
+            <y:ShapeNode>
+              <y:Geometry height="50.0" width="122.0" x="683.0" y="272.8502691650426"/>
+              <y:Fill color="#FFFF99" transparent="false"/>
+              <y:BorderStyle color="#FF0000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.3515625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="122.0" x="0.0" y="13.82421875">Delete blog post</y:NodeLabel>
+              <y:Shape type="ellipse"/>
+            </y:ShapeNode>
+          </data>
+        </node>
+        <node id="n0::n3">
+          <data key="d4"/>
+          <data key="d6">
+            <y:ShapeNode>
+              <y:Geometry height="50.0" width="122.0" x="689.0000000000001" y="198.85026916504262"/>
+              <y:Fill color="#FFFF99" transparent="false"/>
+              <y:BorderStyle color="#FF0000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.3515625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="122.0" x="0.0" y="13.82421875">Validate Comment</y:NodeLabel>
+              <y:Shape type="ellipse"/>
+            </y:ShapeNode>
+          </data>
+        </node>
+        <node id="n0::n4">
+          <data key="d4"/>
+          <data key="d6">
+            <y:ShapeNode>
+              <y:Geometry height="50.0" width="122.0" x="846.9999999999999" y="432.84655281067296"/>
+              <y:Fill color="#FFFF99" transparent="false"/>
+              <y:BorderStyle color="#FF0000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.3515625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="122.0" x="0.0" y="13.82421875">Subscribe</y:NodeLabel>
+              <y:Shape type="ellipse"/>
+            </y:ShapeNode>
+          </data>
+        </node>
+        <node id="n0::n5">
+          <data key="d4"/>
+          <data key="d6">
+            <y:ShapeNode>
+              <y:Geometry height="50.0" width="122.0" x="641.4" y="626.5005383300853"/>
+              <y:Fill color="#FFFF99" transparent="false"/>
+              <y:BorderStyle color="#FF0000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="38.703125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="122.0" x="0.0" y="5.6484375">Browse blog posts list</y:NodeLabel>
+              <y:Shape type="ellipse"/>
+            </y:ShapeNode>
+          </data>
+        </node>
+        <node id="n0::n6">
+          <data key="d4"/>
+          <data key="d6">
+            <y:ShapeNode>
+              <y:Geometry height="50.0" width="122.0" x="625.4000000000001" y="706.5005383300853"/>
+              <y:Fill color="#FFFF99" transparent="false"/>
+              <y:BorderStyle color="#FF0000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.3515625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="122.0" x="0.0" y="13.82421875">Read blog post</y:NodeLabel>
+              <y:Shape type="ellipse"/>
+            </y:ShapeNode>
+          </data>
+        </node>
+        <node id="n0::n7">
+          <data key="d4"/>
+          <data key="d6">
+            <y:ShapeNode>
+              <y:Geometry height="50.0" width="122.0" x="551.8" y="775.6502691650427"/>
+              <y:Fill color="#FFFF99" transparent="false"/>
+              <y:BorderStyle color="#FF0000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.3515625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="122.0" x="0.0" y="13.82421875">Leave comment</y:NodeLabel>
+              <y:Shape type="ellipse"/>
+            </y:ShapeNode>
+          </data>
+        </node>
+        <node id="n0::n8">
+          <data key="d4"/>
+          <data key="d6">
+            <y:ShapeNode>
+              <y:Geometry height="50.0" width="122.0" x="569.4000000000001" y="551.4251345825213"/>
+              <y:Fill color="#FFFF99" transparent="false"/>
+              <y:BorderStyle color="#FF0000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="38.703125" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="122.0" x="0.0" y="5.6484375">Leave message to administrator</y:NodeLabel>
+              <y:Shape type="ellipse"/>
+            </y:ShapeNode>
+          </data>
+        </node>
+        <node id="n0::n9">
+          <data key="d4"/>
+          <data key="d6">
+            <y:ShapeNode>
+              <y:Geometry height="50.0" width="122.0" x="602.5658315429688" y="432.84655281067296"/>
+              <y:Fill color="#FFFF99" transparent="false"/>
+              <y:BorderStyle color="#FF0000" type="line" width="1.0"/>
+              <y:NodeLabel alignment="center" autoSizePolicy="node_width" configuration="CroppingLabel" fontFamily="Dialog" fontSize="13" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="22.3515625" horizontalTextPosition="center" iconTextGap="4" modelName="internal" modelPosition="c" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="122.0" x="0.0" y="13.82421875">Login</y:NodeLabel>
+              <y:NodeLabel alignment="center" autoSizePolicy="node_width" borderDistance="0.0" configuration="CroppingLabel" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" height="36.1875" horizontalTextPosition="center" iconTextGap="4" lineColor="#FF0000" modelName="sides" modelPosition="s" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="122.0" x="0.0" y="50.0">EXT: 
+if NOT subscribed</y:NodeLabel>
+              <y:Shape type="ellipse"/>
+            </y:ShapeNode>
+          </data>
+        </node>
+      </graph>
+    </node>
+    <node id="n1">
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="103.13633728027344" width="63.87300109863281" x="375.1269989013672" y="524.8569659423846"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle hasColor="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="sandwich" modelPosition="s" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="41.341796875" x="11.265602111816406" y="107.13633728027344">Visitor</y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="false"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="1"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <node id="n2">
+      <data key="d6">
+        <y:SVGNode>
+          <y:Geometry height="103.13633728027344" width="63.87300109863281" x="375.1269989013672" y="290.8636627197265"/>
+          <y:Fill color="#CCCCFF" transparent="false"/>
+          <y:BorderStyle hasColor="false" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="12" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="sandwich" modelPosition="s" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="41.330078125" x="11.271461486816406" y="107.13633728027344">Admin</y:NodeLabel>
+          <y:SVGNodeProperties usingVisualBounds="false"/>
+          <y:SVGModel svgBoundsPolicy="0">
+            <y:SVGContent refid="1"/>
+          </y:SVGModel>
+        </y:SVGNode>
+      </data>
+    </node>
+    <edge id="e0" source="n1" target="n0::n8">
+      <data key="d8"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e1" source="n1" target="n0::n5">
+      <data key="d8"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e2" source="n1" target="n0::n6">
+      <data key="d8"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e3" source="n1" target="n0::n7">
+      <data key="d8"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e4" source="n2" target="n0::n9">
+      <data key="d8"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="n0::e0" source="n0::n4" target="n0::n9">
+      <data key="d8"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="dashed" width="1.0"/>
+          <y:Arrows source="none" target="plain"/>
+          <y:EdgeLabel alignment="center" backgroundColor="#FFFFFF" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasLineColor="false" height="18.701171875" horizontalTextPosition="center" iconTextGap="4" modelName="centered" modelPosition="center" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="69.390625" x="-95.91239672851566" y="-9.35059074401454">&lt;&lt;Extend&gt;&gt;<y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e5" source="n2" target="n0::n0">
+      <data key="d8"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e6" source="n2" target="n0::n2">
+      <data key="d8"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e7" source="n2" target="n0::n3">
+      <data key="d8"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+    <edge id="e8" source="n2" target="n0::n1">
+      <data key="d8"/>
+      <data key="d10">
+        <y:PolyLineEdge>
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="none"/>
+          <y:BendStyle smoothed="false"/>
+        </y:PolyLineEdge>
+      </data>
+    </edge>
+  </graph>
+  <data key="d7">
+    <y:Resources>
+      <y:Resource id="1">&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;!-- Created with Inkscape (http://www.inkscape.org/) --&gt;
+
+&lt;svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="actor.svg"&gt;
+  &lt;defs
+     id="defs2" /&gt;
+  &lt;sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.979899"
+     inkscape:cx="191.75058"
+     inkscape:cy="820.70105"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:snap-object-midpoints="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" /&gt;
+  &lt;metadata
+     id="metadata5"&gt;
+    &lt;rdf:RDF&gt;
+      &lt;cc:Work
+         rdf:about=""&gt;
+        &lt;dc:format&gt;image/svg+xml&lt;/dc:format&gt;
+        &lt;dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /&gt;
+        &lt;dc:title&gt;&lt;/dc:title&gt;
+      &lt;/cc:Work&gt;
+    &lt;/rdf:RDF&gt;
+  &lt;/metadata&gt;
+  &lt;g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"&gt;
+    &lt;circle
+       style="opacity:1;fill:#ffff99;fill-opacity:1;stroke:#ff0000;stroke-width:0.26458332;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:3.77952766;stroke-opacity:1"
+       id="path4491"
+       cx="-58.397324"
+       cy="-87.578087"
+       r="3.6892428"
+       transform="scale(-1)" /&gt;
+    &lt;path
+       style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 58.397322,91.286456 0,10.394354"
+       id="path4508"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" /&gt;
+    &lt;path
+       style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 50.045752,110.95616 8.35157,-9.27535 8.35157,9.27535"
+       id="path4512"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc" /&gt;
+    &lt;path
+       style="fill:none;fill-rule:evenodd;stroke:#ff0000;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="M 50.045752,94.284558 H 66.74889"
+       id="path4529"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" /&gt;
+  &lt;/g&gt;
+&lt;/svg&gt;
+</y:Resource>
+    </y:Resources>
+  </data>
+</graphml>
