@@ -47,7 +47,7 @@ author
           <y:Geometry height="137.35466953713686" width="137.94186437029055" x="572.9999999999999" y="48.867995694294706"/>
           <y:Fill color="#FFFF99" transparent="false"/>
           <y:BorderStyle color="#FF0000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="32.9072265625" x="52.51731890389527" y="3.0">User<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="13" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="19.92626953125" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#FF0000" verticalTextPosition="bottom" visible="true" width="68.2890625" x="34.82640093514527" y="3.0">moderator<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -55,7 +55,7 @@ author
             </y:ModelParameter>
           </y:NodeLabel>
           <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="false">
-            <y:AttributeLabel>user_id</y:AttributeLabel>
+            <y:AttributeLabel>moderator_id</y:AttributeLabel>
             <y:MethodLabel>first_name
 last_name
 password</y:MethodLabel>
