@@ -5,12 +5,12 @@
 <?php foreach( $articles as $article )
 { ?>
   <article>
-    <h3><?php echo $article["title"] ?></h3>
-    <p><?php echo $article["timestamp_fr"] ?></p>
-    <?php echo $article["excerpt"] ?>
-    <a href="article.php?id=<?php echo $article["ID"] ?>">Lire la suite...</a>
+    <h3><?php echo $article["title"]; ?></h3>
+    <p><?php echo $article["timestamp_fr"]; ?></p>
+    <?php echo $article["excerpt"]; ?>
+    <a href="index.php?page=article&id=<?php echo $article["ID"]; ?>">Lire la suite...</a>
   </article>
 <?php
 } ?>
 <?php $content = ob_get_clean(); ?>
-<?php require("baseTemplateView.php"); ?>
+<?php require( VIEW_PATH."baseTemplateView.php" ); ?>

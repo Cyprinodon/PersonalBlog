@@ -6,10 +6,10 @@
   <link rel="stylesheet" src="css/style.css">
 </head>
 <body>
-  <?php require("partials/headerPartial.php") ?>
+  <?php require( VIEW_PATH."partials/headerPartial.php" ) ?>
   <main>
     <?php echo $content ?>
   </main>
-  <?php require("partials/footerPartial.php") ?>
+  <?php require( VIEW_PATH."partials/footerPartial.php" ) ?>
 </body>
 </html>
