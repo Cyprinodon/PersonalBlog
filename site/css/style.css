@@ -1,0 +1,16 @@
+html#squeleton-style body {
+  background-color: #313335;
+  margin: 0;
+}
+
+html#squeleton-style .wrapper {
+  background-color: #FFF;
+  width: 600px;
+  margin-left: auto; margin-right: auto;
+  padding: 8px;
+}
+
+html#squeleton-style article hr {
+  width: 200px;
+  margin: 0 auto;
+}
