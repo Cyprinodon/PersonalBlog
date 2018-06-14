@@ -31,6 +31,14 @@ function displayDetailedArticle()
   $article = $articleManager->getById( $_GET["id"] );
   $comments = $commentManager->getAllByArticleId( $_GET["id"] );
 
+  for( $index = 0; $index < sizeof($comments); $index++ )
+  {
+    if( $comments[$index]["status"] != "Validé" )
+    {
+      array_splice($comments, $index);
+    }
+  }
+
   require( VIEW_PATH."articleView.php" );
 }
 
