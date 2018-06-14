@@ -1,6 +1,7 @@
 <footer>
+  <hr>
   <div id="admin-section">
-    <h6>Espace <em>Administration</em></h6>
+    <h4>Espace <em>Administration</em></h4>
     <a href="#">Se connecter</a>
   </div>
 </footer>
