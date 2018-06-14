@@ -6,25 +6,29 @@ const CHARSET = "utf8";
 const LOGIN = "root";
 const PASSWORD = "";
 const ROOT_PATH = __DIR__.DIRECTORY_SEPARATOR;
+const VIEW_PATH = ROOT_PATH."views/";
+const MODEL_PATH = ROOT_PATH."models/";
+const CONTROLLER_PATH = ROOT_PATH."controllers/";
 
-require_once( ROOT_PATH."controllers/articleController.php" );
+require_once( CONTROLLER_PATH."homeController.php" );
 
 if( isset( $_GET["page"] ) )
 {
-  if( $_GET["page"] == "home" )
+  switch($_GET["page"])
   {
-    listAllArticles();
-  }
-  elseif( $_GET["page"] == "article" )
-  {
-    if( isset($_GET['id']) AND $_GET['id'] > 0 )
-    {
-      displayDetailledArticle();
-    }
-    else
-    {
-      echo "Error: 'id' missing in query string.";
-    }
+    case "home" :
+      listAllArticles();
+      break;
+    case "article" :
+      if( isset($_GET['id']) AND $_GET['id'] > 0 ) {
+        displayDetailedArticle();
+      }
+      else {
+        echo "Error: 'id' missing in query string.";
+      }
+      break;
+    case "contact" :
+      break;
   }
 }
 else{

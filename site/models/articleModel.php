@@ -4,15 +4,13 @@ class Article
   public function getById( $articleId )
   {
     $database = $this->connectToDatabase();
-
     $sqlString = 
       "SELECT
         ID,
         title,
         excerpt,
         content,
-        DATE_FORMAT(last_edit_timestamp, 'le %d/%m/%Y à %H:%i:%s') AS timestamp_fr,
-        comment_id
+        DATE_FORMAT(last_edit_timestamp, 'le %d/%m/%Y à %H:%i:%s') AS timestamp_fr
       FROM article
       WHERE ID = ?
       ORDER BY last_edit_timestamp DESC";
@@ -38,8 +36,19 @@ class Article
 
     $request = $database->query( $sqlString );
     $articles = $request->fetchAll( PDO::FETCH_ASSOC );
-    var_dump($articles);
     return $articles;
+  }
+
+  public function getCount()
+  {
+    $database = $this->connectToDatabase();
+    $sqlString =
+      "SELECT
+        COUNT(ID) AS max_id
+      FROM article";
+    $request = $database->query( $sqlString );
+    $count = $request->fetch( PDO::FETCH_ASSOC );
+    return $count["max_id"];
   }
 
   private function connectToDatabase()
