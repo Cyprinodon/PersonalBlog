@@ -11,6 +11,8 @@ const MODEL_PATH = ROOT_PATH."models/";
 const CONTROLLER_PATH = ROOT_PATH."controllers/";
 
 require_once( CONTROLLER_PATH."homeController.php" );
+require_once( CONTROLLER_PATH."contactController.php" );
+
 
 if( isset( $_GET["page"] ) )
 {
@@ -28,11 +30,10 @@ if( isset( $_GET["page"] ) )
       }
       break;
     case "contact" :
+      displayContactPage();
       break;
   }
 }
 else{
   listAllArticles();
 }
-
-
