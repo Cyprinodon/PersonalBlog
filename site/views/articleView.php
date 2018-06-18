@@ -3,6 +3,9 @@
 <article>
   <h2><?php echo $article["title"]; ?></h3>
   <p><?php echo $article["timestamp_fr"]; ?></p>
+  <h3>Résumé</h3>
+  <p><?php echo $article["excerpt"]; ?></p>
+  <h3>Article complet</h3>
   <?php echo $article["content"]; ?>
   <a href="index.php?page=article&id=<?php echo $previousId ?>">&lt; Article précédent</a>
   <a href="index.php?page=home">| Index |</a>
@@ -21,5 +24,23 @@
     </article>
   <?php } ?>
 </section>
+<form action="commentController.php" method="post">
+  <fieldset>
+    <legend>Laisser un commentaire</legend>
+    <div clas="input-group">
+      <label for="comment-name">Nom :</label>
+      <input type="text" name="comment-name" placeholder="Votre nom..." maxlength="50">
+      <small>(50 max.)</small>
+    </div>
+    <div class="input-group">
+      <label for="comment-message">Commentaire :</label>
+      <textarea type="text" name="comment-message" placeholder="Votre message..." cols="50" rows="10" maxlength="500"></textarea>
+      <small>(500 max.)</small>
+    </div>
+    <div class=input-group>
+      <input type="submit" name="contact-submit" value="Envoyer" title="Seuls les commentaires validés par un modérateur seront publiés !">
+    </div>
+  </fieldset>
+</form>
 <?php $content = ob_get_clean(); ?>
 <?php require( VIEW_PATH."baseTemplateView.php" ); ?>

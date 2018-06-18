@@ -5,7 +5,7 @@ html#squeleton-style body {
 
 html#squeleton-style .wrapper {
   background-color: #FFF;
-  width: 600px;
+  max-width: 600px;
   margin-left: auto; margin-right: auto;
   padding: 8px;
 }
@@ -21,4 +21,8 @@ html#squeleton-style form div.input-group {
 
 html#squeleton-style label {
   vertical-align: top;
+}
+
+.inline {
+  display: inline-block;
 }

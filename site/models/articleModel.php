@@ -1,5 +1,7 @@
 <?php
-class Article
+require_once(MODEL_PATH."Model.php");
+
+class Article extends Model
 {
   public function getById( $articleId )
   {
@@ -49,18 +51,5 @@ class Article
     $request = $database->query( $sqlString );
     $count = $request->fetch( PDO::FETCH_ASSOC );
     return $count["max_id"];
-  }
-
-  private function connectToDatabase()
-  {
-    try
-    {
-      $database = new PDO("mysql:host=localhost;dbname=personal_blog;charset=utf8", "root", "");
-    }
-    catch( Exception $error )
-    {
-      die( "Error:".$error->getMessage() );
-    }
-    return $database;
   }
 }

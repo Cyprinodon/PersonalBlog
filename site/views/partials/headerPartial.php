@@ -2,6 +2,7 @@
   <img src="images/fishface.png" width="128" height="128" alt="The face of a fish !">
   <h1>Dimitri Grabette</h1>
   <h2>Blog personnel</h2>
+  <h3>Spécial <em>années 1990</em></h3>
   <nav id="main-nav">
     <ul>
       <li><a href="index.php?page=home">Accueil</a></li>
