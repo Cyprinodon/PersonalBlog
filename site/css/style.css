@@ -14,3 +14,11 @@ html#squeleton-style article hr {
   width: 200px;
   margin: 0 auto;
 }
+
+html#squeleton-style form div.input-group {
+  margin: 8px 0;
+}
+
+html#squeleton-style label {
+  vertical-align: top;
+}
