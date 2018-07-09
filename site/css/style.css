@@ -26,3 +26,7 @@ html#squeleton-style label {
 .inline {
   display: inline-block;
 }
+
+.alert {
+  color: red;
+}

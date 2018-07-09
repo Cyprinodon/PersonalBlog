@@ -16,10 +16,10 @@
     <column id="COL2" populated="true" UUID="ec19ccfa-35f2-40e2-86c3-a5d8e6a5c7d1" autoIncrement="false" autoIncrementSequenceName="Article_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL3" populated="true" UUID="477313ab-92ab-4a68-b484-b527a7212f36" autoIncrement="false" autoIncrementSequenceName="Article_title_seq" defaultValue="Article title" name="title" nullable="0" physicalName="title" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL3" populated="true" UUID="477313ab-92ab-4a68-b484-b527a7212f36" autoIncrement="false" autoIncrementSequenceName="Article_title_seq" defaultValue="" name="title" nullable="0" physicalName="title" precision="100" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL4" populated="true" UUID="21cc6d5e-35f8-41a6-81f0-03d5db34bf8a" autoIncrement="false" autoIncrementSequenceName="Article_excerpt_seq" defaultValue="" name="excerpt" nullable="1" physicalName="excerpt" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL4" populated="true" UUID="21cc6d5e-35f8-41a6-81f0-03d5db34bf8a" autoIncrement="false" autoIncrementSequenceName="Article_excerpt_seq" defaultValue="" name="excerpt" nullable="1" physicalName="excerpt" precision="500" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     <column id="COL5" populated="true" UUID="9aec6209-ae9d-45a1-a9c3-179f1929dd1e" autoIncrement="false" autoIncrementSequenceName="Article_content_seq" defaultValue="" name="content" nullable="1" physicalName="content" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
@@ -28,7 +28,7 @@
     <column id="COL6" populated="true" UUID="b4347129-e1d5-4f54-8c39-073c7309fea9" autoIncrement="false" autoIncrementSequenceName="Article_last_edit_timestamp_seq" defaultValue="" name="last_edit_timestamp" nullable="0" physicalName="last_edit_timestamp" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL7" populated="true" UUID="1ba16f61-7de4-447f-b76b-febeb54cc1c2" autoIncrement="false" autoIncrementSequenceName="Article_comment_id_seq" defaultValue="" name="comment_id" nullable="1" physicalName="comment_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL7" populated="true" UUID="1ba16f61-7de4-447f-b76b-febeb54cc1c2" autoIncrement="false" autoIncrementSequenceName="Article_comment_id_seq" defaultValue="" name="comment_id" nullable="0" physicalName="comment_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     </folder>
@@ -48,19 +48,19 @@
     <column id="COL11" populated="true" UUID="4044bb3a-2387-48f3-b321-df9854e7a981" autoIncrement="false" autoIncrementSequenceName="Moderator_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="2" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL12" populated="true" UUID="291a6e88-4aaf-4602-9182-8f5b81e6fe86" autoIncrement="false" autoIncrementSequenceName="Moderator_first_name_seq" defaultValue="Unnamed" name="first_name" nullable="0" physicalName="first_name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL12" populated="true" UUID="291a6e88-4aaf-4602-9182-8f5b81e6fe86" autoIncrement="false" autoIncrementSequenceName="Moderator_first_name_seq" defaultValue="" name="first_name" nullable="0" physicalName="first_name" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL13" populated="true" UUID="bd4bd6b7-0634-41ec-a845-0fb3cbfe8396" autoIncrement="false" autoIncrementSequenceName="Moderator_last_name_seq" defaultValue="Unnamed" name="last_name" nullable="0" physicalName="last_name" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL13" populated="true" UUID="bd4bd6b7-0634-41ec-a845-0fb3cbfe8396" autoIncrement="false" autoIncrementSequenceName="Moderator_last_name_seq" defaultValue="" name="last_name" nullable="0" physicalName="last_name" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL14" populated="true" UUID="74b2f71d-aa4c-4d32-86f3-7544585f4b70" autoIncrement="false" autoIncrementSequenceName="Moderator_password_seq" defaultValue="" name="password" nullable="0" physicalName="password" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL14" populated="true" UUID="74b2f71d-aa4c-4d32-86f3-7544585f4b70" autoIncrement="false" autoIncrementSequenceName="Moderator_password_seq" defaultValue="" name="password" nullable="0" physicalName="password" precision="30" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     <column id="COL15" populated="true" UUID="2340cb26-8d60-4fd3-89f4-246bd5423312" autoIncrement="false" autoIncrementSequenceName="Moderator_signup_timestamp_seq" defaultValue="" name="signup_timestamp" nullable="0" physicalName="signup_timestamp" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
      <remarks></remarks>
     </column>
-    <column id="COL16" populated="true" UUID="35e117d3-f7ec-4f8e-9e98-cd912e7abc5b" autoIncrement="false" autoIncrementSequenceName="Moderator_article_id_seq" defaultValue="" name="article_id" nullable="1" physicalName="article_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
+    <column id="COL16" populated="true" UUID="35e117d3-f7ec-4f8e-9e98-cd912e7abc5b" autoIncrement="false" autoIncrementSequenceName="Moderator_article_id_seq" defaultValue="" name="article_id" nullable="0" physicalName="article_id" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
     </folder>
@@ -80,13 +80,13 @@
     <column id="COL20" populated="true" UUID="0627c392-5561-40b4-a3a8-8a24c99488a4" autoIncrement="false" autoIncrementSequenceName="Comment_ID_seq" defaultValue="" name="ID" nullable="0" physicalName="ID" precision="0" primaryKeySeq="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="4" userDefinedTypeUUID="63b011c7-c81f-4c75-8271-632b3c87f727" >
      <remarks></remarks>
     </column>
-    <column id="COL21" populated="true" UUID="578bb715-4856-4fb2-b60a-d608fad8f6c2" autoIncrement="false" autoIncrementSequenceName="Comment_author_seq" defaultValue="Visiteur anonyme" name="author" nullable="0" physicalName="author" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL21" populated="true" UUID="578bb715-4856-4fb2-b60a-d608fad8f6c2" autoIncrement="false" autoIncrementSequenceName="Comment_author_seq" defaultValue="" name="author" nullable="0" physicalName="author" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL22" populated="true" UUID="d68f84af-de43-4ad8-9a39-de507cd4dc41" autoIncrement="false" autoIncrementSequenceName="Comment_content_seq" defaultValue="" name="content" nullable="0" physicalName="content" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL22" populated="true" UUID="d68f84af-de43-4ad8-9a39-de507cd4dc41" autoIncrement="false" autoIncrementSequenceName="Comment_content_seq" defaultValue="" name="content" nullable="0" physicalName="content" precision="500" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
-    <column id="COL23" populated="true" UUID="52601891-bdfa-4df3-a0cc-6bfeb07d502f" autoIncrement="false" autoIncrementSequenceName="Comment_status_seq" defaultValue="À valider" name="status" nullable="0" physicalName="status" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
+    <column id="COL23" populated="true" UUID="52601891-bdfa-4df3-a0cc-6bfeb07d502f" autoIncrement="false" autoIncrementSequenceName="Comment_status_seq" defaultValue="" name="status" nullable="0" physicalName="status" precision="50" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="12" userDefinedTypeUUID="831ac2d4-0e65-47ec-a0b7-62b7f6b8760a" >
      <remarks></remarks>
     </column>
     <column id="COL24" populated="true" UUID="9cfcca58-ffda-4f16-b8d3-552708783e51" autoIncrement="false" autoIncrementSequenceName="Comment_creation_timestamp_seq" defaultValue="" name="creation_timestamp" nullable="0" physicalName="creation_timestamp" precision="0" referenceCount="1" scale="0" sourceDataTypeName="UserDefinedSQLType" type="93" userDefinedTypeUUID="6497d8de-0e00-40d6-a42e-e2adca83be64" >
