@@ -41,7 +41,31 @@ class Article extends Model
     return $articles;
   }
 
-  public function getCount()
+  public function getAuthor( $articleId )
+  {
+    $database = $this->connectToDatabase();
+    $sqlString =
+      "SELECT
+          moderator.ID,
+          firstName,
+          lastName
+        FROM moderator
+        WHERE article_id = ?";
+  }
+
+  public function getCountFromAuthor( $AuthorId )
+  {
+    $database = $this->connectToDatabase();
+    $sqlString =
+      "SELECT
+        COUNT(ID) AS max_id
+      FROM article";
+    $request = $database->query( $sqlString );
+    $count = $request->fetch( PDO::FETCH_ASSOC );
+    return $count["max_id"];
+  }
+
+    public function getCount()
   {
     $database = $this->connectToDatabase();
     $sqlString =

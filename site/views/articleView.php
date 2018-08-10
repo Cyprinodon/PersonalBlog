@@ -1,4 +1,3 @@
-<?php ?>
 <?php ob_start(); ?>
 <article>
   <h2><?php echo $article["title"]; ?></h3>

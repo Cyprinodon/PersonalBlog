@@ -1,6 +1,6 @@
 <?php
 require_once(__DIR__."/../constants.php");
-require_once(MODEL_PATH."moderatorModel.php");
+require_once(MODEL_PATH."Moderator.php");
 
 function CheckLoginInputs() {
   $userInputLogin = $_POST[ 'login-name' ];
@@ -32,11 +32,4 @@ function logout() {
   $_SESSION = array();
   session_destroy();
 }
-
-
-
-
-
-
-
 

@@ -1,6 +1,6 @@
 <?php
-require_once( MODEL_PATH."articleModel.php" );
-require_once( MODEL_PATH."commentModel.php" );
+require_once( MODEL_PATH."Article.php" );
+require_once( MODEL_PATH."Comment.php" );
 
 function listAllArticles()
 {
