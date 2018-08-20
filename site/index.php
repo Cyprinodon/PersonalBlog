@@ -1,38 +1,42 @@
 <?php
-//Database constants --> Temporary !!!
-const HOST_NAME = "localhost";
-const DATABASE_NAME = "personal_blog";
-const CHARSET = "utf8";
-const LOGIN = "root";
-const PASSWORD = "";
-const ROOT_PATH = __DIR__.DIRECTORY_SEPARATOR;
-const VIEW_PATH = ROOT_PATH."views/";
-const MODEL_PATH = ROOT_PATH."models/";
-const CONTROLLER_PATH = ROOT_PATH."controllers/";
+namespace DimGrab\MonBlog;
+use \DimGrab\MonBlog\Constant;
+use \DimGrab\MonBlog\Controller;
+require_once( __DIR__."/constants.php");
+require_once( Constant\CONTROLLER_PATH."homeController.php" );
+require_once( Constant\CONTROLLER_PATH."loginController.php" );
+require_once( Constant\CONTROLLER_PATH."contactController.php" );
 
-require_once( CONTROLLER_PATH."homeController.php" );
+if( isset( $_GET['loginattempt'] ) AND $_GET['loginattempt'] == true ) {
+  Controller\checkLoginInputs();
+}
+if( isset( $_GET['logoutattempt'] ) AND $_GET['logoutattempt'] == true ) {
+  Controller\logout();
+}
 
-if( isset( $_GET["page"] ) )
+if( isset( $_GET['page'] ) )
 {
-  switch($_GET["page"])
+  $page = $_GET['page'];
+
+  switch($page)
   {
     case "home" :
-      listAllArticles();
+      Controller\listAllArticles();
       break;
     case "article" :
-      if( isset($_GET['id']) AND $_GET['id'] > 0 ) {
-        displayDetailedArticle();
+      if( isset( $_GET['id'] ) AND $_GET['id'] > 0 ) {
+        Controller\displayDetailedArticle();
       }
       else {
         echo "Error: 'id' missing in query string.";
       }
       break;
     case "contact" :
+      Controller\displayContactPage();
       break;
   }
 }
 else{
-  listAllArticles();
+  $_GET['page'] = "home";
+  Controller\listAllArticles();
 }
-
-

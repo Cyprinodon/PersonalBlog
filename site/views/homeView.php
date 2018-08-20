@@ -1,7 +1,7 @@
 <?php ?>
 <?php ob_start(); ?>
 <h2>Liste des articles</h2>
-
+<div class="container">
 <?php foreach( $articles as $article )
 { ?>
   <article>
@@ -12,5 +12,6 @@
   </article>
 <?php
 } ?>
+</div>
 <?php $content = ob_get_clean(); ?>
-<?php require( VIEW_PATH."baseTemplateView.php" ); ?>
+<?php require( \DimGrab\MonBlog\Constant\VIEW_PATH."baseTemplateView.php" ); ?>

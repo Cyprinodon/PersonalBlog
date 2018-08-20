@@ -1,5 +1,8 @@
 <?php
-class Article
+namespace DimGrab\MonBlog\Model;
+require_once(\DimGrab\MonBlog\Constant\MODEL_PATH."Model.php");
+
+class Article extends Model
 {
   public function getById( $articleId )
   {
@@ -17,7 +20,7 @@ class Article
 
     $request = $database->prepare( $sqlString );
     $request->execute( array( $articleId ) );
-    $article = $request->fetch( PDO::FETCH_ASSOC );
+    $article = $request->fetch( \PDO::FETCH_ASSOC );
     return $article;
   }
 
@@ -35,11 +38,23 @@ class Article
       ORDER BY last_edit_timestamp DESC";
 
     $request = $database->query( $sqlString );
-    $articles = $request->fetchAll( PDO::FETCH_ASSOC );
+    $articles = $request->fetchAll( \PDO::FETCH_ASSOC );
     return $articles;
   }
 
-  public function getCount()
+  public function getAuthor( $articleId )
+  {
+    $database = $this->connectToDatabase();
+    $sqlString =
+      "SELECT
+          moderator.ID,
+          firstName,
+          lastName
+        FROM moderator
+        WHERE article_id = ?";
+  }
+
+  public function getCountFromAuthor( $AuthorId )
   {
     $database = $this->connectToDatabase();
     $sqlString =
@@ -47,20 +62,19 @@ class Article
         COUNT(ID) AS max_id
       FROM article";
     $request = $database->query( $sqlString );
-    $count = $request->fetch( PDO::FETCH_ASSOC );
+    $count = $request->fetch( \PDO::FETCH_ASSOC );
     return $count["max_id"];
   }
 
-  private function connectToDatabase()
+    public function getCount()
   {
-    try
-    {
-      $database = new PDO("mysql:host=localhost;dbname=personal_blog;charset=utf8", "root", "");
-    }
-    catch( Exception $error )
-    {
-      die( "Error:".$error->getMessage() );
-    }
-    return $database;
+    $database = $this->connectToDatabase();
+    $sqlString =
+      "SELECT
+        COUNT(ID) AS max_id
+      FROM article";
+    $request = $database->query( $sqlString );
+    $count = $request->fetch( \PDO::FETCH_ASSOC );
+    return $count["max_id"];
   }
 }

@@ -1,5 +1,6 @@
 <?php
-class Comment
+namespace DimGrab\MonBlog\Model;
+class Comment extends Model
 {
   public function getAllByArticleId( $articleId )
   {
@@ -68,18 +69,5 @@ class Comment
     $comments = $database->prepare( "INSERT INTO comment(article_id, author, content, creation_timestamp, status) VALUES(?, ?, ?, NOW(), 'En attente')" );
     $affectedLines = $comments->execute( array( $articleId, $author, $content ) );
     return $affectedLines;
-  }
-
-  private function connectToDatabase()
-  {
-    try
-    {
-      $database = new PDO("mysql:host=localhost;dbname=personal_blog;charset=utf8", "root", "");
-    }
-    catch( Exception $error )
-    {
-      die( "Error:".$error->getMessage() );
-    }
-    return $database;
   }
 }
