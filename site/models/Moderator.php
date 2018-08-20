@@ -1,4 +1,6 @@
 <?php
+/*namespace monblog\model;
+use monblog\model;*/
 require_once(MODEL_PATH."Model.php");
 
 class Moderator extends Model

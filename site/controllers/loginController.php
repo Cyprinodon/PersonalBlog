@@ -1,4 +1,7 @@
 <?php
+/*namespace monblog\controller;
+use monblog\constant;
+use monblog\model;*/
 require_once(__DIR__."/../constants.php");
 require_once(MODEL_PATH."Moderator.php");
 

@@ -1,4 +1,6 @@
 <?php
+/*namespace monblog\model;
+use monblog\model;*/
 class Comment extends Model
 {
   public function getAllByArticleId( $articleId )

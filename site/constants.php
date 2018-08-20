@@ -1,4 +1,5 @@
 <?php
+/*namespace monblog\constant;*/
 //Database constants --> Temporary !!!
 const HOST_NAME = "localhost";
 const DATABASE_NAME = "personal_blog";

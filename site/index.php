@@ -1,4 +1,7 @@
 <?php
+/*namespace monblog;
+use monblog\constant;
+use monblog\controller;*/
 require_once( __DIR__."/constants.php");
 require_once( CONTROLLER_PATH."homeController.php" );
 require_once( CONTROLLER_PATH."loginController.php" );

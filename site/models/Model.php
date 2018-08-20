@@ -1,5 +1,5 @@
 <?php
-
+/*namespace monblog\model;*/
 class Model
 {
   protected function connectToDatabase()

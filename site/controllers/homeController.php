@@ -1,4 +1,6 @@
 <?php
+/*namespace monblog\controller;
+use monblog\model;*/
 require_once( MODEL_PATH."Article.php" );
 require_once( MODEL_PATH."Comment.php" );
 
