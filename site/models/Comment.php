@@ -1,6 +1,5 @@
 <?php
-/*namespace monblog\model;
-use monblog\model;*/
+namespace DimGrab\MonBlog\Model;
 class Comment extends Model
 {
   public function getAllByArticleId( $articleId )

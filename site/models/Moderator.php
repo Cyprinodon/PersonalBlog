@@ -1,7 +1,6 @@
 <?php
-/*namespace monblog\model;
-use monblog\model;*/
-require_once(MODEL_PATH."Model.php");
+namespace DimGrab\MonBlog\Model;
+require_once(\DimGrab\MonBlog\Constant\MODEL_PATH."Model.php");
 
 class Moderator extends Model
 {

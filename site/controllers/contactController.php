@@ -1,5 +1,5 @@
 <?php
-/*namespace monblog\controller;*/
+namespace DimGrab\MonBlog\Controller;
 function displayContactPage() {
-  require( VIEW_PATH."contactView.php" );
+  require( \DimGrab\MonBlog\Constant\VIEW_PATH."contactView.php" );
 }

@@ -1,15 +1,16 @@
 <?php
-/*namespace monblog\controller;
-use monblog\constant;
-use monblog\model;*/
+namespace DimGrab\MonBlog\Controller;
+use \DimGrab\MonBlog\Constant;
+use \DimGrab\MonBlog\Model;
+
 require_once(__DIR__."/../constants.php");
-require_once(MODEL_PATH."Moderator.php");
+require_once(Constant\MODEL_PATH."Moderator.php");
 
 function CheckLoginInputs() {
   $userInputLogin = $_POST[ 'login-name' ];
   $userInputPassword = $_POST[ 'login-password' ];
 
-  $moderatorManager = new Moderator();
+  $moderatorManager = new Model\Moderator();
   $moderator = $moderatorManager->getByLogin( $userInputLogin );
 
   $isValidPassword = password_verify( $userInputPassword, $moderator['password'] );
