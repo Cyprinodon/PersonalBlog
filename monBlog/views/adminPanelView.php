@@ -12,7 +12,7 @@
     </tr>
   </thead>
   <tbody>
-    <?php foreach( $articles AS $article ) ?>
+    <?php foreach( $articles AS $article ): ?>
     <tr>
       <td><?php echo $article["ID"] ?></td>
       <td><?php echo $article["title"] ?></td>
@@ -35,7 +35,7 @@
     </tr>
   </thead>
   <tbody>
-    <?php foreach( $comments AS $comment ) ?>
+    <?php foreach( $comments AS $comment ): ?>
     <tr>
       <td><?php echo $comment["ID"] ?></td>
       <td><?php echo $comment["content"] ?></td>
@@ -58,14 +58,15 @@
     </tr>
   </thead>
   <tbody>
-    <?php foreach( $comments AS $comment ) ?>
+    <?php foreach( $moderators AS $moderator ): ?>
     <tr>
-      <td><?php echo $administrator["ID"] ?></td>
-      <td><?php echo $administrator["firstName"] ?></td>
-      <td><?php echo $administrator["lastName"] ?></td>
-      <td><?php echo $administrator["timestamp_fr"] ?></td>
-      <td><?php echo $administrator["status"] ?></td>
+      <td><?php echo $moderator["ID"] ?></td>
+      <td><?php echo $moderator["first_name"] ?></td>
+      <td><?php echo $moderator["last_name"] ?></td>
+      <td><?php echo $moderator["timestamp_fr"] ?></td>
     </tr>
   <?php endforeach; ?>
   </tbody>
 </table>
+<?php $content = ob_get_clean(); ?>
+<?php require( \VIEW_PATH."baseTemplateView.php" ); ?>

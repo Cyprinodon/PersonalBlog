@@ -42,4 +42,4 @@
   </fieldset>
 </form>
 <?php $content = ob_get_clean(); ?>
-<?php require( \DimGrab\MonBlog\Constant\VIEW_PATH."baseTemplateView.php" ); ?>
+<?php require( \VIEW_PATH."baseTemplateView.php" ); ?>

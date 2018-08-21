@@ -1,6 +1,6 @@
 <?php
-namespace DimGrab\MonBlog\Model;
-require_once(\DimGrab\MonBlog\Constant\MODEL_PATH."Model.php");
+namespace models;
+/*require_once(\MODEL_PATH."Model.php");*/
 
 class Moderator extends Model
 {
@@ -22,7 +22,7 @@ class Moderator extends Model
 
     $request = $database->prepare( $sqlString );
     $request->execute( array( $moderatorId ) );
-    $moderator = $request->fetch( PDO::FETCH_ASSOC );
+    $moderator = $request->fetch( \PDO::FETCH_ASSOC );
     return $moderator;
   }
 
@@ -60,7 +60,7 @@ class Moderator extends Model
 
     $request = $database->prepare( $sqlString );
     $request->execute( array( $moderatorLogin ) );
-    $moderator = $request->fetch( PDO::FETCH_ASSOC );
+    $moderator = $request->fetch( \PDO::FETCH_ASSOC );
     return $moderator;
   }
 }

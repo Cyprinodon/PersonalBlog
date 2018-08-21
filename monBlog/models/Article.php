@@ -1,6 +1,6 @@
 <?php
-namespace DimGrab\MonBlog\Model;
-require_once(\DimGrab\MonBlog\Constant\MODEL_PATH."Model.php");
+namespace models;
+/*require_once(\MODEL_PATH."Model.php");*/
 
 class Article extends Model
 {
