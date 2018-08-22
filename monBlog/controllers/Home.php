@@ -18,7 +18,7 @@ class Home {
     $articleManager = new  \models\Article();
     $commentManager = new  \models\Comment();
 
-    $currentArticleId = $_GET["id"];
+    $currentArticleId = $_GET['id'];
     $maxId = $articleManager->getCount();
     $nextId = strval($currentArticleId+1);
     $previousId = strval($currentArticleId-1);
@@ -31,8 +31,8 @@ class Home {
       $previousId = $maxId;
     }
 
-    $article = $articleManager->getById( $_GET["id"] );
-    $comments = $commentManager->getAllByArticleId( $_GET["id"] );
+    $article = $articleManager->getById( $_GET['id'] );
+    $comments = $commentManager->getAllByArticleId( $_GET['id'] );
 
     for( $index = 0; $index < sizeof($comments); $index++ )
     {
@@ -58,6 +58,11 @@ class Home {
     {
       header( "Location: index.php?page=article&id=".$articleId );
     }
+  }
+
+  public function displayWarningPage( $message ) {
+    $_POST["message"] = $message;
+    require( VIEW_PATH."warningView.php" );
   }
 }
 

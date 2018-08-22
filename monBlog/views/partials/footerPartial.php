@@ -3,7 +3,7 @@
     <h4>Espace <em>Administration</em></h4>
     <?php if ( isset( $_SESSION[ 'ID' ] ) AND isset( $_SESSION[ 'login' ] ) ): ?>
       <p>Bienvenue <em><?php echo $_SESSION['user_name'] ?></em> ! Vous êtes actuellement connecté.</p>
-      <a class="button button-primary" href="index.php?page=adminPanel" title="accéder à la page d'administration">Tableau de bord</a>
+      <a class="button button-primary" href="index.php?page=admin-panel" title="accéder à la page d'administration">Tableau de bord</a>
       <form action="http://monblog.local/index.php?<?php echo $_SERVER['QUERY_STRING'] ?>&logoutattempt=true" method="post">
         <fieldset>
           <legend>Formulaire de déconnexion</legend>

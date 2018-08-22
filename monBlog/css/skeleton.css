@@ -129,6 +129,9 @@ body {
 article {
   margin-bottom: 4rem;
 }
+.large-margin-top {
+  margin-top: 6rem;
+}
 
 
 /* Typography
@@ -224,6 +227,28 @@ input[type="button"].button-primary:focus {
   color: #FFF;
   background-color: #1EAEDB;
   border-color: #1EAEDB; }
+.button.red-button,
+button.red-button,
+input[type="submit"].red-button,
+input[type="reset"].red-button,
+input[type="button"].red-button {
+  color: #ff8c8c;
+  border-color: #ff8c8c; }
+
+.button.red-button:hover,
+button.red-button:hover,
+input[type="submit"].red-button:hover,
+input[type="reset"].red-button:hover,
+input[type="button"].red-button:hover,
+.button.red-button:focus,
+button.red-button:focus,
+input[type="submit"].red-button:focus,
+input[type="reset"].red-button:focus,
+input[type="button"].red-button:focus  {
+  color: #bf1818;
+  border-color: #bf1818;
+  }
+
 
 
 /* Forms
@@ -257,7 +282,9 @@ textarea {
      -moz-appearance: none;
           appearance: none; }
 textarea {
+  height: 128px;
   min-height: 65px;
+  resize: vertical;
   padding-top: 6px;
   padding-bottom: 6px; }
 input[type="email"]:focus,
@@ -428,6 +455,17 @@ header {
   text-align: center; }
 .navbar {
   display: none; }
+.header-portrait {
+  padding: 5px;
+  border-radius: 100%;
+  border: solid 1px #33C3F0;
+}
+.alert {
+  color: #bf1818;
+}
+textarea.large-height {
+  height: 30rem;
+}
 
 /* Larger than phone */
 @media (min-width: 550px) {
@@ -548,3 +586,4 @@ header {
   .popover-item:first-child .popover-link:hover:after {
     border-bottom-color: #33C3F0; }
 }
+

@@ -62,12 +62,29 @@ class Comment extends Model
     return $comment;
   }
 
-  public function addNew( $articleId, $author, $comment )
+  public function addNew( $articleId, $author, $content )
   {
     $database = $this->connectToDatabase();
 
-    $comments = $database->prepare( "INSERT INTO comment(article_id, author, content, creation_timestamp, status) VALUES(?, ?, ?, NOW(), 'En attente')" );
+    $comments = $database->prepare( "INSERT INTO comment(ID, article_id, author, content, creation_timestamp, status) VALUES('', ?, ?, ?, NOW(), 'En attente')" );
     $affectedLines = $comments->execute( array( $articleId, $author, $content ) );
     return $affectedLines;
+  }
+
+  public function updateStatus( $commentId, $status ) {
+    $database = $this->connectToDatabase();
+    $sqlString = "UPDATE comment SET status = ? WHERE ID = ?";
+    $request = $database->prepare( $sqlString );
+    $request->execute( array( $status, $commentId ) );
+    header( "Location: index.php?page=admin-panel" );
+  }
+
+    public function delete( $commentId )
+  {
+    $database = $this->connectToDatabase();
+    $sqlString = "DELETE FROM comment WHERE ID = ?";
+    $request = $database->prepare( $sqlString );
+    $request->execute( array( $commentId ) );
+    header( "Location: index.php?page=admin-panel" );
   }
 }

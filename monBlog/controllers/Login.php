@@ -2,7 +2,7 @@
 namespace controllers;
 
 class Login {
-  function CheckInputs() {
+  public function CheckInputs() {
     $userInputLogin = $_POST[ 'login-name' ];
     $userInputPassword = $_POST[ 'login-password' ];
 
@@ -11,24 +11,20 @@ class Login {
 
     $isValidPassword = password_verify( $userInputPassword, $moderator['password'] );
 
-    if( isset( $moderator['login'] ) == false ) {
-      $_POST['alert'] = "Identifiant non reconnu !";
+    if( isset( $moderator['login'] ) == false OR $isValidPassword == false) {
+      $_POST['alert'] = "Identifiant ou mot de passe erroné !";
     }
     else {
-      if( $isValidPassword ) {
+      if(isset($_SESSION) == false) {
         session_start();
-        $_SESSION['ID'] = $moderator['ID'];
-        $_SESSION['login'] = $moderator['login'];
-        $_SESSION['user_name'] = $moderator['first_name']." ".$moderator['last_name'];
       }
-      else {
-        $_POST['alert'] = "Mot de passe erroné !";
-      }
-    }
+    $_SESSION['ID'] = $moderator['ID'];
+    $_SESSION['login'] = $moderator['login'];
+    $_SESSION['user_name'] = $moderator['first_name']." ".$moderator['last_name'];
   }
+}
 
-  function logout() {
-    session_start();
+  public function logout() {
     $_SESSION = array();
     session_destroy();
   }
