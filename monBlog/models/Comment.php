@@ -1,5 +1,5 @@
 <?php
-namespace DimGrab\MonBlog\Model;
+namespace models;
 class Comment extends Model
 {
   public function getAllByArticleId( $articleId )
@@ -19,7 +19,7 @@ class Comment extends Model
 
     $request = $database->prepare( $sqlString );
     $request->execute( array( $articleId ) );
-    $comments = $request->fetchAll( PDO::FETCH_ASSOC );
+    $comments = $request->fetchAll( \PDO::FETCH_ASSOC );
     return $comments;
   }
 
@@ -34,7 +34,7 @@ class Comment extends Model
         status,
         DATE_FORMAT(creation_timestamp, 'le %d/%m/%Y à %H:%i:%s') AS timestamp_fr
       FROM comment
-      ORDER BY DESC creation_timestamp";
+      ORDER BY creation_timestamp DESC";
 
     $request = $database->query( $sqlString );
     $comments = $request->fetchAll();
@@ -58,16 +58,30 @@ class Comment extends Model
 
     $request = $database->prepare( $sqlString );
     $request->execute( array( $commentId ) );
-    $comment = $request->fetch( PDO::FETCH_ASSOC );
+    $comment = $request->fetch( \PDO::FETCH_ASSOC );
     return $comment;
   }
 
-  public function addNew( $articleId, $author, $comment )
+  public function addNew( $articleId, $author, $content )
   {
     $database = $this->connectToDatabase();
 
-    $comments = $database->prepare( "INSERT INTO comment(article_id, author, content, creation_timestamp, status) VALUES(?, ?, ?, NOW(), 'En attente')" );
-    $affectedLines = $comments->execute( array( $articleId, $author, $content ) );
-    return $affectedLines;
+    $request = $database->prepare( "INSERT INTO comment( article_id, author, content, creation_timestamp, status) VALUES( ?, ?, ?, NOW(), 'En attente')" );
+    $request->execute( array( $articleId, $author, $content ) );
+  }
+
+  public function changeStatus( $commentId, $status ) {
+    $database = $this->connectToDatabase();
+    $sqlString = "UPDATE comment SET status = ? WHERE ID = ?";
+    $request = $database->prepare( $sqlString );
+    $request->execute( array( $status, $commentId ) );
+  }
+
+    public function delete( $commentId )
+  {
+    $database = $this->connectToDatabase();
+    $sqlString = "DELETE FROM comment WHERE ID = ?";
+    $request = $database->prepare( $sqlString );
+    $request->execute( array( $commentId ) );
   }
 }

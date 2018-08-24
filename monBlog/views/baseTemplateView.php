@@ -11,11 +11,11 @@
 </head>
 <body>
   <div class="container">
-    <?php require( \DimGrab\MonBlog\Constant\VIEW_PATH."partials/headerPartial.php" ) ?>
+    <?php require( \VIEW_PATH."partials/headerPartial.php" ) ?>
     <main>
       <?php echo $content ?>
     </main>
-    <?php require( \DimGrab\MonBlog\Constant\VIEW_PATH."partials/footerPartial.php" ) ?>
+    <?php require( \VIEW_PATH."partials/footerPartial.php" ) ?>
   </div>
 </body>
 </html>

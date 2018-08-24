@@ -1,5 +1,5 @@
 <?php
-namespace DimGrab\MonBlog\Model;
+namespace models;
 class Model
 {
   protected function connectToDatabase()

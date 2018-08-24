@@ -23,17 +23,17 @@
     </article>
   <?php } ?>
 </section>
-<form action="commentController.php" method="post">
+<form action="index.php?page=article&action=add-new-comment&id=<?php echo $article['ID'] ?>" method="post">
   <fieldset>
     <legend>Laisser un commentaire</legend>
     <div clas="input-group">
       <label for="comment-name">Nom :</label>
-      <input type="text" name="comment-name" placeholder="Votre nom..." maxlength="50">
+      <input type="text" name="comment-author" placeholder="Votre nom..." maxlength="50">
       <small>(50 max.)</small>
     </div>
     <div class="input-group">
       <label for="comment-message">Commentaire :</label>
-      <textarea type="text" name="comment-message" placeholder="Votre message..." cols="50" rows="10" maxlength="500"></textarea>
+      <textarea type="text" name="comment-content" placeholder="Votre message..." cols="50" rows="10" maxlength="500"></textarea>
       <small>(500 max.)</small>
     </div>
     <div class=input-group>
@@ -42,4 +42,4 @@
   </fieldset>
 </form>
 <?php $content = ob_get_clean(); ?>
-<?php require( \DimGrab\MonBlog\Constant\VIEW_PATH."baseTemplateView.php" ); ?>
+<?php require( \VIEW_PATH."baseTemplateView.php" ); ?>
