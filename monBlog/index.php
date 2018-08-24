@@ -35,28 +35,42 @@ if( isset( $_GET['page'] ) )
 
   switch($page)
   {
+    /*HOME
+    -------------------------*/
     case "home" :
       $homePage = new controllers\Home;
       $homePage->listAllArticles();
       break;
+
+    /*ARTICLE
+    -------------------------*/
     case "article" :
       if( isset( $_GET['id'] ) AND $_GET['id'] > 0 ) {
         $articlePage = new controllers\Home;
         if( isset( $_GET['action'] ) AND $_GET['action'] == "add-new-comment" ) {
           $articlePage->addNewComment();
         }
-        $articlePage->displayDetailedArticle();
+        else {
+          $articlePage->displayDetailedArticle();
+        }
       }
       else {
         echo "Error: 'id' missing in query string.";
       }
       break;
 
+    /*CONTACT
+    -------------------------*/
     case "contact" :
       $contactPage = new controllers\Contact;
+      if( isset( $_GET['action'] ) AND $_GET['action'] == 'send-mail' ) {
+        $contactPage->sendMail();
+      }
       $contactPage->displayView();
       break;
 
+    /*ADMIN PANEL
+    -------------------------*/
     case "admin-panel" :
       if( isset( $_SESSION['ID'] ) ) {
         $adminPanelPage = new controllers\AdminPanel;
