@@ -66,17 +66,15 @@ class Comment extends Model
   {
     $database = $this->connectToDatabase();
 
-    $comments = $database->prepare( "INSERT INTO comment(ID, article_id, author, content, creation_timestamp, status) VALUES('', ?, ?, ?, NOW(), 'En attente')" );
-    $affectedLines = $comments->execute( array( $articleId, $author, $content ) );
-    return $affectedLines;
+    $request = $database->prepare( "INSERT INTO comment( article_id, author, content, creation_timestamp, status) VALUES( ?, ?, ?, NOW(), 'En attente')" );
+    $request->execute( array( $articleId, $author, $content ) );
   }
 
-  public function updateStatus( $commentId, $status ) {
+  public function changeStatus( $commentId, $status ) {
     $database = $this->connectToDatabase();
     $sqlString = "UPDATE comment SET status = ? WHERE ID = ?";
     $request = $database->prepare( $sqlString );
     $request->execute( array( $status, $commentId ) );
-    header( "Location: index.php?page=admin-panel" );
   }
 
     public function delete( $commentId )
@@ -85,6 +83,5 @@ class Comment extends Model
     $sqlString = "DELETE FROM comment WHERE ID = ?";
     $request = $database->prepare( $sqlString );
     $request->execute( array( $commentId ) );
-    header( "Location: index.php?page=admin-panel" );
   }
 }

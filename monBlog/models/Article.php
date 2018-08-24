@@ -93,7 +93,6 @@ class Article extends Model
       VALUES(?, ?, ?, NOW(), ?)";
     $request = $database->prepare( $sqlString );
     $request->execute( array( $title, $excerpt, $content, $authorId ) );
-    header( "Location: index.php?page=admin-panel" );
   }
 
   public function edit( $articleId, $title, $excerpt, $content, $authorId ) 

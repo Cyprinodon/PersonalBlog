@@ -42,6 +42,9 @@ if( isset( $_GET['page'] ) )
     case "article" :
       if( isset( $_GET['id'] ) AND $_GET['id'] > 0 ) {
         $articlePage = new controllers\Home;
+        if( isset( $_GET['action'] ) AND $_GET['action'] == "add-new-comment" ) {
+          $articlePage->addNewComment();
+        }
         $articlePage->displayDetailedArticle();
       }
       else {
@@ -77,6 +80,9 @@ if( isset( $_GET['page'] ) )
             case 'add-moderator':
               $adminPanelPage->displayNewModeratorPage();
               break;
+            case 'edit-moderator':
+              $adminPanelPage->displayEditModeratorPage();
+              break;
             case 'send-moderator':
               $adminPanelPage->addNewModerator();
               break;
@@ -84,11 +90,24 @@ if( isset( $_GET['page'] ) )
               $adminPanelPage->editModerator();
               break;
             case 'delete-moderator':
-              $adminPanelpage->deleteModerator();
+              $adminPanelPage->deleteModerator();
               break;
+            case 'accept-comment':
+              $adminPanelPage->changeCommentStatus("Validé");
+              break;
+            case 'refuse-comment':
+              $adminPanelPage->changeCommentStatus("Refusé");
+              break;
+            case 'delete-comment':
+              $adminPanelPage->deleteComment();
+              break;
+            default:
+              $adminPanelPage->displayAllContent();
           }
         }
+        else {
           $adminPanelPage->displayAllContent();
+        }
       }
       else {
         $homepage = new controllers\Home;

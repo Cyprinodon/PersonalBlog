@@ -15,7 +15,7 @@
       </div>
       <div class="row">
         <label for="moderator-password">Mot de passe :</label>
-        <input type="text" class="u-full-width" name="moderator-password">
+        <input type="password" class="u-full-width" name="moderator-password">
       </div>
       <div class="row">
         <input type="submit" class="button-primary u-full-width" name="moderator-submit" value="Ajouter">

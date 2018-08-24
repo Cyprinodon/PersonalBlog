@@ -3,6 +3,8 @@ namespace controllers;
 use controllers\AdminPanel;
 
 class AdminPanel {
+/* Page display related functions
+************************************************************/
   Private function displayArticles() {
     $articleManager = new \models\Article();
     $articles = $articleManager->getAllWithAuthor();
@@ -22,15 +24,6 @@ class AdminPanel {
     $moderators = $moderatorManager->getAll();
 
     return $moderators;
-  }
-
-  private function areAllSet( array $arguments) {
-    foreach($arguments as $argument) {
-      if( isset( $argument ) == false ) {
-        return false;
-      }
-    }
-    return true;
   }
 
   public function displayAllContent() {
@@ -55,9 +48,22 @@ class AdminPanel {
     require(VIEW_PATH."newModeratorView.php");
   }
 
-  public function deleteArticle() {
+  public function displayEditModeratorPage() {
+    $moderatorManager = new \models\Moderator();
+    $moderator = $moderatorManager->getById( $_GET['id'] );
+    require( VIEW_PATH."editModeratorView.php" );
+  }
+
+/* Article related functions
+************************************************************/
+  public function addNewArticle() {
     $articleManager = new \models\Article();
-    $articleManager->delete( $_GET['id'] );
+    $articleManager->AddNew( 
+      $_POST['article-title'], 
+      $_POST['article-excerpt'], 
+      $_POST['article-content'], 
+      $_SESSION['ID'] );
+    header( "Location: index.php?page=admin-panel" );
   }
 
   public function editArticle() {
@@ -68,32 +74,59 @@ class AdminPanel {
       $_POST['edit-article-excerpt'], 
       $_POST['edit-article-content'], 
       $_SESSION['ID'] );
+    header( "Location: index.php?page=admin-panel" );
   }
 
-  public function addNewArticle() {
+  public function deleteArticle() {
     $articleManager = new \models\Article();
-    $articleManager->AddNew( 
-      $_POST['article-title'], 
-      $_POST['article-excerpt'], 
-      $_POST['article-content'], 
-      $_SESSION['ID'] );
-
+    $articleManager->delete( $_GET['id'] );
+    header( "Location: index.php?page=admin-panel" );
   }
 
+/* Comment related functions
+************************************************************/
+  public function changeCommentStatus( $Status ) {
+    $commentManager = new \models\Comment();
+    $commentManager->changeStatus( $_GET['id'], $Status );
+    header( "Location: index.php?page=admin-panel" );
+  }
+
+  public function deleteComment() {
+    $commentManager = new \models\Comment();
+    $commentManager->delete( $_GET['id'] );
+    header( "Location: index.php?page=admin-panel" );
+  }
+
+/* Moderator related functions
+************************************************************/
   public function addNewModerator() {
     $moderatorManager = new \models\Moderator();
     $moderatorManager->AddNew(
       $_POST['moderator-firstname'],
       $_POST['moderator-lastname'],
       $_POST['moderator-password'] );
+    header( "Location: index.php?page=admin-panel" );
   }
 
   public function editModerator() {
-
+    $moderatorManager = new \models\Moderator();
+    if( isset( $_POST['change-moderator-password'] ) AND $_POST['change-moderator-password'] == "on" ) {
+      if( empty( $_POST['edit-moderator-password'] ) == true ) {
+        $_POST['alert'] = "Le champ mot de passe ne doit pas être vide !";
+        require( VIEW_PATH."editModeratorView.php" );
+      }
+      else {
+        $moderatorManager->editPassword( $_GET['id'], $_POST['edit-moderator-password'] );
+      }
+    }
+    $moderatorManager->edit($_GET['id'], $_POST['edit-moderator-firstname'], $_POST['edit-moderator-lastname'] );
+    header("Location: index.php?page=admin-panel");
   }
 
   public function deleteModerator() {
-
+    $moderatorManager = new \models\Moderator();
+    $moderatorManager->delete( $_GET['id'] );
+    header( "Location: index.php?page=admin-panel" );
   }
 }
 

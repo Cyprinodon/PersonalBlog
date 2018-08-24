@@ -45,19 +45,10 @@ class Home {
     require( VIEW_PATH."articleView.php" );
   }
 
-  public function addComment( $articleId, $author, $content )
+  public function addNewComment()
   {
-    $commentManager = new  \models\Comment();
-    $affectedLines = $commentManager->addNew( $articleId, $author, $content );
-
-    if( $affectedLines === false )
-    {
-      throw new Exception( "Comment can't be added." );
-    }
-    else
-    {
-      header( "Location: index.php?page=article&id=".$articleId );
-    }
+    $commentManager = new \models\Comment();
+    $commentManager->addNew( $_GET['id'], $_POST['comment-author'], $_POST['comment-content'] );
   }
 
   public function displayWarningPage( $message ) {

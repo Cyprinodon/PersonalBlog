@@ -73,23 +73,35 @@ class Moderator extends Model
       VALUES( ?, ?, ?, ?, NOW())";
     $request = $database->prepare( $sqlString );
     $request->execute( array( $firstName.$lastName, $firstName, $lastName, $hashedPassword ) );
-    header( "Location: index.php?page=admin-panel" );
   }
 
-  public function edit( $moderatorId, $login, $firstName, $lastName, $password ) {
-    $hashedPassword = password_hash( $password, PASSWORD_DEFAULT);
-
+  public function edit( $moderatorId, $firstName, $lastName ) {
+    $login = $firstName.$lastName;
     $database = $this->connectToDatabase();
     $sqlString = 
-      "UPDATE moderator SET login = ?, first_name = ?, last_name = ?, password = ? WHERE ID = ?";
+      "UPDATE moderator SET login = ?, first_name = ?, last_name = ? WHERE ID = ?";
     $request = $database->prepare( $sqlString );
-    $request->execute( array( $login, $firstName, $lastName, $hashedPassword, $moderatorId ) );
+    $request->execute( array( $login, $firstName, $lastName, $moderatorId ) );
+  }
+
+  public function editPassword( $moderatorId, $password ) {
+    $hashedPassword = password_hash( $password, PASSWORD_DEFAULT);
+    $database = $this->connectToDatabase();
+    $sqlString = 
+      "UPDATE moderator SET password = ? WHERE ID = ?";
+    $request = $database->prepare( $sqlString );
+    try{$request->execute( array($hashedPassword, $moderatorId ) );}
+    catch(exception $e) {
+      var_dump($e);
+    }
+
+    return;
   }
 
   public function delete( $moderatorId ) {
     $database = $this->connectToDatabase();
     $sqlString = "DELETE FROM moderator WHERE ID = ?";
     $request = $database->prepare( $sqlString );
-    $request->$database->execute( array( $moderatorId ) );
+    $request->execute( array( $moderatorId ) );
   }
 }
