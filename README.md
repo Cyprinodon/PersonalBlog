@@ -16,13 +16,20 @@ the site use all the _pages_ listed below:
 
 Inside the **diagrams** folder lies all the project's UML diagrams in _graphml format_:
 * _Use cases_ diagram
-* Individual _sequence_ diagrams for each important use case
+* Individual _sequence_ diagrams
 * Database _class_ diagram
 
 Inside the **site** folder lies all the main files of the project organized with MVC architecture in mind.
 * index.php
 * _css folder_ - all the css files
-* _vendor folder_ - bootstrap libraries
 * _models folder_ - all the models for fetching database entries
 * _views folder_ - all the views and partials
 * _controllers folder_ - all the controllers to link models and views
+
+## Installation
+
+to install the project:
+* Unzip the project somewhere on your computer
+* Take the _MonBlog_ folder and transfer it via ftp or move it inside a local server folder
+* Use _database/personal_blog_DB_export.sql_ to import all database files into your setup
+* Try the site !
