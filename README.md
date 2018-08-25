@@ -32,4 +32,5 @@ to install the project:
 * Unzip the project somewhere on your computer
 * Take the _MonBlog_ folder and transfer it via ftp or move it inside a local server folder
 * Use _database/personal_blog_DB_export.sql_ to import all database files into your setup
+* configure your server to use ines.xistante@gmail.com as an smtp server
 * Try the site !
